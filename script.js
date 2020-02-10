@@ -143,6 +143,8 @@ let checkWinner = (e) => {
 
 
 // if tie 
+
+
 	} else if (score === 9) {
 		alert('its a tie');
 	}
