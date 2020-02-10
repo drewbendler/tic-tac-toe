@@ -16,7 +16,9 @@ let box8 = document.getElementById('box8');
 
 let box9 = document.getElementById('box9');
 
+let player1 = document.getElementById('player1-score');
 
+let player2 = document.getElementById('player2-score');
 
 let score = 0;
 
@@ -56,6 +58,82 @@ boxes.forEach(item => {
 });
 
 
+let checkWinner = (e) => {
+
+	if (box1.style.background === 'red' && box2.style.background === 'red' && box3.style.background === 'red' ) {
+
+		alert('red Wins');
+
+	} if (box4.style.background === 'red' && box5.style.background === 'red' && box6.style.background === 'red') {
+
+		alert('red wins');
+
+	} if (box7.style.background === 'red' && box8.style.background === 'red' && box9.style.background === 'red') {
+
+		alert('red Wins');
+
+	} if (box2.style.background === 'red' && box5.style.background === 'red' && box8.style.background === 'red') {
+
+	alert('red Wins');
+
+	} if (box3.style.background === 'red' && box6.style.background === 'red' && box9.style.background === 'red') {
+
+	alert('red Wins');
+
+	} if (box1.style.background === 'red' && box4.style.background === 'red' && box7.style.background === 'red') {
+
+	alert('red Wins');
+
+	} if (box3.style.background === 'red' && box5.style.background === 'red' && box7.style.background === 'red') {
+
+	alert('red Wins');
+
+	} if (box1.style.background === 'red' && box5.style.background === 'red' && box9.style.background === 'red') {
+
+	alert('red Wins');
+
+	} 
+
+
+
+
+	if (box1.style.background === 'blue' && box2.style.background === 'blue' && box3.style.background === 'blue' ) {
+
+		alert('blue Wins');
+
+	} if (box4.style.background === 'blue' && box5.style.background === 'blue' && box6.style.background === 'blue') {
+
+		alert('blue wins');
+
+	} if (box7.style.background === 'blue' && box8.style.background === 'blue' && box9.style.background === 'blue') {
+
+		alert('blue Wins');
+
+	} if (box2.style.background === 'blue' && box5.style.background === 'blue' && box8.style.background === 'blue') {
+
+	alert('blue Wins');
+
+	} if (box3.style.background === 'blue' && box6.style.background === 'blue' && box9.style.background === 'blue') {
+
+	alert('blue Wins');
+
+	} if (box1.style.background === 'blue' && box4.style.background === 'blue' && box7.style.background === 'blue') {
+
+	alert('blue Wins');
+
+	} if (box3.style.background === 'blue' && box5.style.background === 'blue' && box7.style.background === 'blue') {
+
+	alert('blue Wins');
+
+	} if (box1.style.background === 'blue' && box5.style.background === 'blue' && box9.style.background === 'blue') {
+
+	alert('blue Wins');
+
+	} else if (score === 9) {
+		alert('its a tie');
+	}
+
+}
 
 
 
