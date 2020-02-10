@@ -16,10 +16,6 @@ let box8 = document.getElementById('box8');
 
 let box9 = document.getElementById('box9');
 
-let player1 = document.getElementById('player1-score');
-
-let player2 = document.getElementById('player2-score');
-
 let score = 0;
 
 
