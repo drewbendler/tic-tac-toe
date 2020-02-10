@@ -1,3 +1,6 @@
+
+//name every box
+
 let box1 = document.getElementById('box1');
 
 let box2 = document.getElementById('box2');
@@ -18,6 +21,7 @@ let box9 = document.getElementById('box9');
 
 let score = 0;
 
+//set tracker for clicks
 
 let tracker = function () {
 
@@ -25,12 +29,16 @@ let tracker = function () {
 }
 
 
+//set up function for alernating clicks 
+
 let changeColor = (e) => {
 	e.preventDefault();
 	if (score % 2 === 0) {
 
 		e.target.style.background = 'red';
 		tracker();
+
+// check winner every turn
 		checkWinner();
 
 	} else {
@@ -38,10 +46,14 @@ let changeColor = (e) => {
 		tracker();
 		checkWinner();
 	}
+
+	//stop overlapping clicks
+
 	e.target.removeEventListener('click', changeColor);
 	console.log(score);
 }
 
+//active click on every box
 
 let boxes = document.querySelectorAll('.box');
 
@@ -54,7 +66,11 @@ boxes.forEach(item => {
 });
 
 
+// set up function to check winner 
+
 let checkWinner = (e) => {
+
+	//if red wins 
 
 	if (box1.style.background === 'red' && box2.style.background === 'red' && box3.style.background === 'red' ) {
 
@@ -90,7 +106,7 @@ let checkWinner = (e) => {
 
 	} 
 
-
+//if blue wins
 
 
 	if (box1.style.background === 'blue' && box2.style.background === 'blue' && box3.style.background === 'blue' ) {
@@ -125,6 +141,8 @@ let checkWinner = (e) => {
 
 	alert('blue Wins');
 
+
+// if tie 
 	} else if (score === 9) {
 		alert('its a tie');
 	}
